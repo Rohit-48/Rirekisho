@@ -225,22 +225,6 @@ export function PortfolioPage({ posts }: { posts: { slug: string; title: string;
         </section>
 
         <section className="mb-20 sm:mb-28">
-          <SectionTitle>Skills</SectionTitle>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {skills.map((group) => (
-              <div key={group.category}>
-                <h3 className="mb-2 font-mono text-xs uppercase tracking-wider text-muted">
-                  {group.category}
-                </h3>
-                <p className="text-base leading-7 text-foreground/90">
-                  {group.items.join(" · ")}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section>
           <SectionTitle>Writing</SectionTitle>
           <ul className="space-y-5">
             {posts.map((post) => (
@@ -260,6 +244,22 @@ export function PortfolioPage({ posts }: { posts: { slug: string; title: string;
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="mb-20 sm:mb-28">
+          <SectionTitle>Skills</SectionTitle>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {skills.map((group) => (
+              <div key={group.category}>
+                <h3 className="mb-2 font-mono text-xs uppercase tracking-wider text-muted">
+                  {group.category}
+                </h3>
+                <p className="text-base leading-7 text-foreground/90">
+                  {group.items.join(" · ")}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
 
