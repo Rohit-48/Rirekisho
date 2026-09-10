@@ -69,6 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body className="min-h-full bg-background font-sans text-foreground">
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
